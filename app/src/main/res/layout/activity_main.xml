@@ -157,7 +157,7 @@
         android:scrollbars="none">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -171,7 +171,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Todos"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/all"
                     android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>
 
@@ -185,7 +187,26 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Todos"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/custom"
+                    android:textColor="@color/white" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:backgroundTint="#476aeb"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/today"
                     android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>
 
@@ -199,7 +220,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Todos"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/yesterday"
                     android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>
 
@@ -213,63 +236,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Todos"
-                    android:textColor="@color/white" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:backgroundTint="#476aeb"
-                app:cardCornerRadius="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Todos"
-                    android:textColor="@color/white" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:backgroundTint="#476aeb"
-                app:cardCornerRadius="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Todos"
-                    android:textColor="@color/white" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:backgroundTint="#476aeb"
-                app:cardCornerRadius="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Todos"
-                    android:textColor="@color/white" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:backgroundTint="#476aeb"
-                app:cardCornerRadius="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Todos"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/laste_week"
                     android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>
 
@@ -279,5 +248,6 @@
 
     </HorizontalScrollView>
 
+<!--    Lista expansivel-->
 
 </LinearLayout>
