@@ -1,7 +1,7 @@
 package com.example.expenses.expenses.tracking
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.expenses.expenses.tracking.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

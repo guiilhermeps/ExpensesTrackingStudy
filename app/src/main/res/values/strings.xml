@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Expenses Tracking</string>
+    <string name="search_your_card_here">Search Your Card Here</string>
+    <string name="card_number">**** 5432</string>
+    <string name="card_number_text">Card Number</string>
+    <string name="balance_text">Balance</string>
+    <string name="balance_number">$56,215</string>
+    <string name="income_text">Income</string>
+    <string name="expenses_text">Expenses</string>
+    <string name="income_number">$ 150,00</string>
 </resources>
