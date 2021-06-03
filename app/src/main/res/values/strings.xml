@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Expenses Tracking</string>
+
+    <string name="search_card_info">Procure informacoes por aqui</string>
+    <string name="plus_button">+</string>
+    <string name="card_number_title">Numero Cartao</string>
+    <string name="balance_title">Saldo</string>
+    <string name="received_balance_title">Entrada</string>
+    <string name="outgoing_balance_title">Despesas</string>
+    <string name="card_number_placeholder">**** 5432</string>
+    <string name="balance_placeholder">R$ 2500,00</string>
+    <string name="received_balance_placeholder">R$ 2500,00</string>
+    <string name="outgoing_balance_placeholder">R$ 2500,00</string>
+    <string name="all_button">Todo</string>
+    <string name="custom_button">Customizado</string>
+    <string name="today_button">Hoje</string>
+    <string name="yesterday_button">Ontem</string>
+    <string name="last_week_button">Ultima Semana</string>
+    <string name="fifteen_days_button">15 Dias</string>
 </resources>
