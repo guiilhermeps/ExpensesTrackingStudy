@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$ 300"
+        android:textSize="16sp"
+        android:padding="8dp"
+        app:drawableStartCompat="@drawable/ic_baseline_arrow_downward_24" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$ 60"
+        android:textSize="16sp"
+        android:padding="8dp"
+        app:drawableStartCompat="@drawable/ic_baseline_arrow_downward_24" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$ 800"
+        android:textSize="16sp"
+        android:padding="8dp"
+        app:drawableStartCompat="@drawable/ic_baseline_arrow_upward_24" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$ 1800"
+        android:textSize="16sp"
+        android:padding="8dp"
+        app:drawableStartCompat="@drawable/ic_baseline_arrow_upward_24" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$ 950"
+        android:textSize="16sp"
+        android:padding="8dp"
+        app:drawableStartCompat="@drawable/ic_baseline_arrow_downward_24" />
 
 </LinearLayout>
