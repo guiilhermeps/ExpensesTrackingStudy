@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackgroud"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="4"
+            android:fontFamily="sans-serif"
+            android:text="@string/card_text_today"
+            android:textColor="@color/colorCard"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_weight="4"
+            android:src="@drawable/ic_seta_expasivel" />
+
+    </LinearLayout>
+
+    <include layout="@layout/item_group_today" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="4"
+            android:fontFamily="sans-serif"
+            android:text="@string/text_custom"
+            android:textColor="@color/colorCard"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_weight="4"
+            android:src="@drawable/ic_seta_expasivel" />
+
+    </LinearLayout>
+
+    <include layout="@layout/item_group_custom"
+
+</LinearLayout>

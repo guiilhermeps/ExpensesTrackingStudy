@@ -13,4 +13,13 @@
     <string name="card_text_today">Today</string>
     <string name="card_text_yestarday">Yestarday</string>
     <string name="card_text_lastweek">Last Week</string>
+    <string name="today_jk">JK Hotel and Co</string>
+    <string name="today_jk_valor">- $500</string>
+    <string name="today_investor">Investor</string>
+    <string name="today_investor_valor">+ $200</string>
+    <string name="today_ligth_bill">Light Bill</string>
+    <string name="today_lightbill_valor">- $150</string>
+    <string name="custom_bonus">Bonus</string>
+    <string name="custom_bonus_valor">+ $2500</string>
+    <string name="text_custom">16 April</string>
 </resources>
