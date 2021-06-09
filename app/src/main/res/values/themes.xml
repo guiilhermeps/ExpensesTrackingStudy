@@ -16,6 +16,8 @@
         <!-- Customize your theme here. -->
     </style>
 
-
+    <style name="BottomNavigationMainView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="backgroundTint">#263238</item>
+    </style>
 
 </resources>

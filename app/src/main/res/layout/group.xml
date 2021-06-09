@@ -30,6 +30,8 @@
 
     </LinearLayout>
 
+
+
     <include layout="@layout/item_group_today" />
 
     <LinearLayout
@@ -53,9 +55,8 @@
             android:layout_marginStart="150dp"
             android:layout_weight="4"
             android:src="@drawable/ic_seta_expasivel" />
-
     </LinearLayout>
 
-    <include layout="@layout/item_group_custom"
+    <include layout="@layout/item_group_custom" />
 
 </LinearLayout>
