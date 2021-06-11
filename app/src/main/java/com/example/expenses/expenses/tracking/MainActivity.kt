@@ -1,45 +1,45 @@
 package com.example.expenses.expenses.tracking
 
 import android.os.Bundle
-import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.expenses.expenses.tracking.databinding.ActivityMainBinding
+import com.example.expenses.expenses.tracking.databinding.ActivityMainRelativeBinding
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    //NavigationView.OnNavigationItemSelectedListener
+
+    private lateinit var binding: ActivityMainRelativeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainRelativeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setUpBottomNavigation()
+//        setUpBottomNavigation()
     }
 
 
-    private fun setUpBottomNavigation() {
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
-            onNavigationItemSelected(it)
-        }
-    }
+//    private fun setUpBottomNavigation() {
+//        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+//            onNavigationItemSelected(it)
+//        }
+//    }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.linear_layout -> {
-                Toast.makeText(applicationContext, "Linear", Toast.LENGTH_LONG).show()
-                true
-            }
-            R.id.relative_layout -> {
-                Toast.makeText(applicationContext, "Relative", Toast.LENGTH_LONG).show()
-                true
-            }
-            else -> {
-                Toast.makeText(applicationContext, "Nothing", Toast.LENGTH_LONG).show()
-                false
-            }
-        }
-    }
+//    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+//        return when (item.itemId) {
+//            R.id.linear_layout -> {
+//                Toast.makeText(applicationContext, "Linear", Toast.LENGTH_LONG).show()
+//                true
+//            }
+//            R.id.relative_layout -> {
+//                Toast.makeText(applicationContext, "Relative", Toast.LENGTH_LONG).show()
+//                true
+//            }
+//            else -> {
+//                Toast.makeText(applicationContext, "Nothing", Toast.LENGTH_LONG).show()
+//                false
+//            }
+//        }
+//    }
 
 }
