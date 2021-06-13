@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
-    android:background="#263238">
-
+    android:background="#263238"
+    android:padding="8dp">
+<!--Barra pesquisa-->
     <EditText
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
@@ -13,8 +13,10 @@
         android:layout_alignParentTop="true"
         android:drawableStart="@drawable/ic_search"
         android:hint="@string/search"
-        android:textColorHint="#555e63" />
+        android:textColorHint="#555e63"
+        android:textColor="@color/white"/>
 
+<!-- Btn pesquisa-->
     <Button
         android:id="@+id/search_btn"
         android:layout_width="48dp"
@@ -24,6 +26,7 @@
         android:padding="8dp"
         android:text="@string/soma" />
 
+<!--Card com infos-->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
@@ -139,14 +142,141 @@
 
     </androidx.cardview.widget.CardView>
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
+<!--filtros-->
+    <RelativeLayout
+        android:id="@+id/layout_scroll"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scroll"
-        android:layout_alignBottom="@+id/cardView"
-        android:layout_marginTop="8dp">
+        android:layout_below="@id/cardView">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:id="@+id/layot_scroll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp">
+
+                <!--todos-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:backgroundTint="#476aeb"
+                    app:cardCornerRadius="16dp">
+
+                    <TextView
+                        android:id="@+id/all"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/all"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!--Customizado-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toRightOf="@id/cardView_all"
+                    android:backgroundTint="#313c42"
+                    app:cardCornerRadius="16dp">
+
+                    <TextView
+                        android:id="@+id/custom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/custom"
+                        android:textColor="#798084"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!--hoje-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_today"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toRightOf="@id/cardView_custom"
+                    android:backgroundTint="#313c42"
+                    app:cardCornerRadius="16dp">
+
+                    <TextView
+                        android:id="@+id/today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/laste_week"
+                        android:textColor="#798084"
+                        android:textSize="16sp" />
 
 
-    </HorizontalScrollView>
+                </androidx.cardview.widget.CardView>
 
+                <!--Ontem-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_yesterday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toRightOf="@id/cardView_today"
+                    android:backgroundTint="#313c42"
+                    app:cardCornerRadius="16dp">
+
+                    <TextView
+                        android:id="@+id/yesterday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/yesterday"
+                        android:textColor="#798084"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!--Ultima semana-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_last_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toRightOf="@id/cardView_yesterday"
+                    android:backgroundTint="#313c42"
+                    app:cardCornerRadius="16dp"
+                    android:layout_marginEnd="16dp">
+
+                    <TextView
+                        android:id="@+id/last_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/laste_week"
+                        android:textColor="#798084"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+<!--Lista -->
 </RelativeLayout>

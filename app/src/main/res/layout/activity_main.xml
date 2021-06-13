@@ -254,7 +254,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:orientation="vertical">
-        <include layout="@layout/lista_grupo"/>
+        <include layout="@layout/lista_item"/>
 
 <!--        <ExpandableListView-->
 <!--            android:layout_width="match_parent"-->
@@ -267,7 +267,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:orientation="vertical">
-        <include layout="@layout/lista_grupo"/>
+        <include layout="@layout/lista_item"/>
 
     </LinearLayout>
 </LinearLayout>
