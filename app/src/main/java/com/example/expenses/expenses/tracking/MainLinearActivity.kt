@@ -9,11 +9,13 @@ import com.google.android.material.navigation.NavigationView
 
 class MainLinearActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+    lateinit var bottomNavigation: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_linear_main)
+
+        bottomNavigation = findViewById(R.id.bottom_navigation)
 
         setUpBottomNavigation()
     }

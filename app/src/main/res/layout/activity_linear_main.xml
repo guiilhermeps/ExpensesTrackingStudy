@@ -171,7 +171,8 @@
                     android:layout_height="32dp"
                     android:layout_margin="8dp"
                     android:backgroundTint="#476aeb"
-                    app:cardCornerRadius="24dp">
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -193,7 +194,8 @@
                     android:background="?attr/selectableItemBackground"
                     android:backgroundTint="#313c42"
                     android:padding="16dp"
-                    app:cardCornerRadius="24dp">
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -213,7 +215,8 @@
                     android:layout_height="32dp"
                     android:layout_margin="8dp"
                     android:backgroundTint="#313c42"
-                    app:cardCornerRadius="24dp">
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -233,7 +236,8 @@
                     android:layout_height="32dp"
                     android:layout_margin="8dp"
                     android:backgroundTint="#313c42"
-                    app:cardCornerRadius="24dp">
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -253,7 +257,8 @@
                     android:layout_height="32dp"
                     android:layout_margin="8dp"
                     android:backgroundTint="#313c42"
-                    app:cardCornerRadius="24dp">
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -273,7 +278,8 @@
                     android:layout_height="32dp"
                     android:layout_margin="8dp"
                     android:backgroundTint="#313c42"
-                    app:cardCornerRadius="24dp">
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
