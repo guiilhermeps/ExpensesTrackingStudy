@@ -22,4 +22,5 @@
     <string name="custom_bonus">Bonus</string>
     <string name="custom_bonus_valor">+ $2500</string>
     <string name="text_custom">16 April</string>
+    <string name="txt_last_month">Last Month</string>
 </resources>
