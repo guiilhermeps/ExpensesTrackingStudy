@@ -12,4 +12,11 @@
         android:enabled="true"
         android:icon="@drawable/ic_relative_layout"
         android:title="Relative" />
+
+    <item
+        android:id="@+id/constraint_layout"
+        android:checked="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_constraint_layout"
+        android:title="Constraint" />
 </menu>
