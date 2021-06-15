@@ -2,6 +2,7 @@ package com.example.expenses.expenses.tracking
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.expenses.expenses.tracking.databinding.ActivityMainConstraintBinding
 import com.example.expenses.expenses.tracking.databinding.ActivityMainRelativeBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -9,11 +10,11 @@ class MainActivity : AppCompatActivity() {
 
     //NavigationView.OnNavigationItemSelectedListener
 
-    private lateinit var binding: ActivityMainRelativeBinding
+    private lateinit var binding: ActivityMainConstraintBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainRelativeBinding.inflate(layoutInflater)
+        binding = ActivityMainConstraintBinding.inflate(layoutInflater)
         setContentView(binding.root)
 //        setUpBottomNavigation()
     }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroud">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_field_search"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Search"
+        app:layout_constraintEnd_toStartOf="@id/btn_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_search"
+        app:startIconTint="@color/colorPrimaryExT">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/search_your_card_here" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#3F51B5"
+        android:shadowRadius="12"
+        android:text="+"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/txt_field_search"
+        app:layout_constraintCircleRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_field_search"
+        app:layout_constraintTop_toTopOf="@id/txt_field_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
