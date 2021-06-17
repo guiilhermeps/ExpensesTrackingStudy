@@ -39,7 +39,6 @@
         android:text="+"
         android:textColor="@color/white" />
 
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
@@ -327,11 +326,4 @@
         android:layout_height="0.1dp"
         android:background="@color/white" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        style="@style/BottomNavigationMainView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_main_navigation" />
 </RelativeLayout>
