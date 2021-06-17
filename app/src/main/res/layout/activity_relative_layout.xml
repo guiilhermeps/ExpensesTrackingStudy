@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#263238"
     android:padding="8dp">
-<!--Barra pesquisa-->
+    <!--Barra pesquisa-->
     <EditText
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
@@ -13,10 +13,10 @@
         android:layout_alignParentTop="true"
         android:drawableStart="@drawable/ic_search"
         android:hint="@string/search"
-        android:textColorHint="#555e63"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textColorHint="#555e63" />
 
-<!-- Btn pesquisa-->
+    <!-- Btn pesquisa-->
     <Button
         android:id="@+id/search_btn"
         android:layout_width="48dp"
@@ -26,7 +26,7 @@
         android:padding="8dp"
         android:text="@string/soma" />
 
-<!--Card com infos-->
+    <!--Card com infos-->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
@@ -142,9 +142,9 @@
 
     </androidx.cardview.widget.CardView>
 
-<!--filtros-->
+    <!--filtros-->
     <RelativeLayout
-        android:id="@+id/layout_scroll"
+        android:id="@+id/layout_scroll_parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/cardView">
@@ -254,10 +254,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_toRightOf="@id/cardView_yesterday"
                     android:backgroundTint="#313c42"
-                    app:cardCornerRadius="16dp"
-                    android:layout_marginEnd="16dp">
+                    app:cardCornerRadius="16dp">
 
                     <TextView
                         android:id="@+id/last_week"
@@ -278,5 +278,315 @@
 
     </RelativeLayout>
 
-<!--Lista -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_scroll_parent">
+
+        <RelativeLayout
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Lista 1-->
+            <RelativeLayout
+                android:id="@+id/layout_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/cabecalho_lista"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/today"
+                        android:textColor="#6e767a"
+                        app:drawableEndCompat="@drawable/ic_expande" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_list"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/item_lista_1"
+                        android:textColor="#6e767a"
+                        android:textSize="18sp"
+                        app:drawableStartCompat="@drawable/ic_seta_baixo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/category_item_list"
+                        android:textColor="#6e767a"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/item_value_2"
+                    android:textColor="#a16461"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lista2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lista"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/item_list_2"
+                        android:textColor="#6e767a"
+                        android:textSize="18sp"
+                        app:drawableStartCompat="@drawable/ic_seta_cima" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/category_item_list_2"
+                        android:textColor="#6e767a"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/value_2"
+                    android:textColor="#2fa038"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lista3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lista2"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/item_list_3"
+                        android:textColor="#6e767a"
+                        android:textSize="18sp"
+                        app:drawableStartCompat="@drawable/ic_seta_baixo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/category_list_item"
+                        android:textColor="#6e767a"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/value_invest"
+                    android:textColor="#a16461"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <!--lista 2 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_list_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lista3"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:id="@+id/cabecalho_lista_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/other_date"
+                        android:textColor="#6e767a"
+                        app:drawableEndCompat="@drawable/ic_expande" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lista_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_list_2"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/item_lista_1"
+                        android:textColor="#6e767a"
+                        android:textSize="18sp"
+                        app:drawableStartCompat="@drawable/ic_seta_baixo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/category_item_list"
+                        android:textColor="#6e767a"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/item_value_2"
+                    android:textColor="#a16461"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lista_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lista_2"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/item_list_2"
+                        android:textColor="#6e767a"
+                        android:textSize="18sp"
+                        app:drawableStartCompat="@drawable/ic_seta_cima" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/category_item_list_2"
+                        android:textColor="#6e767a"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/value_2"
+                    android:textColor="#2fa038"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lista03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lista_3"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/item_list_3"
+                        android:textColor="#6e767a"
+                        android:textSize="18sp"
+                        app:drawableStartCompat="@drawable/ic_seta_baixo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/category_list_item"
+                        android:textColor="#6e767a"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/value_invest"
+                    android:textColor="#a16461"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_item_nav"
+        android:background="#263238"
+        />
+
+
 </RelativeLayout>

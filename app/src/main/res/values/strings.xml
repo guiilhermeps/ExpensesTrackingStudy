@@ -16,4 +16,16 @@
     <string name="laste_week">Ultima semana</string>
     <string name="fitfteen_days">15 dias</string>
     <string name="soma">+</string>
+    <string name="item_lista_1">JK Hotel and CO</string>
+    <string name="category_item_list">Comida</string>
+    <string name="category_item_list_2">Outros</string>
+    <string name="item_list_2">Investimento</string>
+    <string name="item_list_3">Energia eletrica</string>
+    <string name="category_list_item">Gastos</string>
+    <string name="value_invest">- $ 3,000</string>
+    <string name="value_2">+ $4,500</string>
+    <string name="item_value_2">- $1000</string>
+    <string name="other_date">16 Abril</string>
+    <string name="relative">Relative</string>
+    <string name="linear">Linear</string>
 </resources>
