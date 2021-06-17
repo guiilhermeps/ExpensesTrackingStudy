@@ -50,12 +50,14 @@
             android:layout_marginTop="16dp"
             android:backgroundTint="#5c707a"
             android:padding="16dp"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:background="@drawable/card_view_background"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -296,16 +298,4 @@
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/white"/>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/BottomNavigationMainView"
-        app:menu="@menu/bottom_main_navigation"/>
 </LinearLayout>

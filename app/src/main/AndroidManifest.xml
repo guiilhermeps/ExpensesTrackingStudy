@@ -11,7 +11,7 @@
         android:theme="@style/Theme.ExpensesTracking">
 
         <activity
-            android:name=".MainLinearActivity"
+            android:name=".view.MainActivity"
             android:screenOrientation="userPortrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
