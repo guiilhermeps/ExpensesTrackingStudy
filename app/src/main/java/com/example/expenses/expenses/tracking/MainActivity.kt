@@ -16,7 +16,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.frame_holder, LinearFragment()).commit()
         setUpBottomNavigation()
+
     }
 
     private fun setUpBottomNavigation() {
@@ -28,15 +31,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.linear_layout -> {
-                Toast.makeText(applicationContext, "Linear", Toast.LENGTH_LONG).show()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame_holder, LinearFragment()).commit()
                 true
             }
             R.id.relative_layout -> {
-                Toast.makeText(applicationContext, "Relative", Toast.LENGTH_LONG).show()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame_holder, RelativeFragment()).commit()
                 true
             }
             R.id.constraint_layout -> {
-                Toast.makeText(applicationContext, "Constraint", Toast.LENGTH_LONG).show()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame_holder, ConstraintFragment()).commit()
                 true
             }
             else -> {
@@ -45,4 +51,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
     }
+
+
 }

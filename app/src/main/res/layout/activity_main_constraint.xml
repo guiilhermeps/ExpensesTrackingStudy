@@ -47,16 +47,151 @@
         app:layout_constraintStart_toEndOf="@+id/txt_field_search"
         app:layout_constraintTop_toTopOf="@id/txt_field_search" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/card_list"
-        android:layout_width="0dp"
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="28dp"
         app:layout_constraintEnd_toEndOf="@id/btn_add"
         app:layout_constraintStart_toStartOf="@id/txt_field_search"
-        app:layout_constraintTop_toBottomOf="@id/txt_field_search"
-        tools:itemCount="1"
-        tools:listitem="@layout/item_card_info" />
+        app:layout_constraintTop_toBottomOf="@id/txt_field_search">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_gradiente">
+
+            <TextView
+                android:id="@+id/txt_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/card_number_text"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/balance_text"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txt_card" />
+
+            <TextView
+                android:id="@+id/txt_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/card_number"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="@id/txt_card"
+                app:layout_constraintTop_toBottomOf="@id/txt_card" />
+
+            <TextView
+                android:id="@+id/txt_balance_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_balance"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/balance_number"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="@id/txt_balance"
+                app:layout_constraintTop_toBottomOf="@id/txt_balance" />
+
+            <TextView
+                android:id="@+id/txt_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/income_text"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/txt_card_number"
+                app:layout_constraintTop_toBottomOf="@id/txt_card_number" />
+
+            <TextView
+                android:id="@+id/txt_expenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/expenses_text"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/txt_balance_number"
+                app:layout_constraintTop_toBottomOf="@id/txt_balance_number" />
+
+            <ImageView
+                android:id="@+id/img_seta_verde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/ic_seta_verde"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/txt_income"
+                app:layout_constraintTop_toBottomOf="@id/txt_income" />
+
+            <TextView
+                android:id="@+id/txt_income_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/income_number"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@id/img_seta_verde"
+                app:layout_constraintTop_toTopOf="@id/img_seta_verde" />
+
+            <ImageView
+                android:id="@+id/img_seta_vermelha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/ic_seta_vermelha"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/txt_expenses"
+                app:layout_constraintTop_toBottomOf="@id/txt_expenses" />
+
+            <TextView
+                android:id="@+id/txt_expenses_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="$ 80,00"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@id/img_seta_vermelha"
+                app:layout_constraintTop_toTopOf="@id/img_seta_vermelha" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
 
     <HorizontalScrollView
         android:id="@+id/horizontal_scroll"
@@ -64,9 +199,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:scrollbars="none"
-        app:layout_constraintEnd_toEndOf="@id/card_list"
-        app:layout_constraintStart_toStartOf="@id/card_list"
-        app:layout_constraintTop_toBottomOf="@id/card_list">
+        app:layout_constraintEnd_toEndOf="@id/card"
+        app:layout_constraintStart_toStartOf="@id/card"
+        app:layout_constraintTop_toBottomOf="@id/card">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -225,5 +360,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </HorizontalScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_scroll">
+
+        <include layout="@layout/group" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
