@@ -12,7 +12,6 @@ import com.google.android.material.navigation.NavigationView
 
 private const val HOME_TAG = "Home"
 
-
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
