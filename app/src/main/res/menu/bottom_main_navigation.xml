@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
         android:id="@+id/home_fragment"
         android:checked="true"
@@ -12,5 +13,4 @@
         android:enabled="true"
         android:icon="@drawable/ic_report"
         android:title="Report" />
-
 </menu>
