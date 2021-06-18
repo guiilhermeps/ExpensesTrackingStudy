@@ -4,10 +4,14 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.expenses.expenses.tracking.ui.fragment.HomeFragment
 import com.example.expenses.expenses.tracking.R
 import com.example.expenses.expenses.tracking.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
+
+private const val HOME_TAG = "Home"
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -17,8 +21,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.frame_holder, HomeFragment()).commit()
+        setFragment(HomeFragment(), HOME_TAG)
         setUpBottomNavigation()
 
     }
@@ -31,9 +34,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.constraint_layout -> {
+            R.id.home_fragment -> {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.frame_holder, HomeFragment(), "HOME_TAG").commit()
+                setFragment(HomeFragment(), HOME_TAG)
                 true
             }
             else -> {
@@ -43,5 +46,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-
+    private fun setFragment(fragment: Fragment, tag: String) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.frame_holder, fragment, tag).commit()
+    }
 }
