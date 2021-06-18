@@ -49,16 +49,10 @@
 
 
     <androidx.viewpager.widget.ViewPager
+     android:layout_marginTop="16dp"
         android:id="@+id/pager_card"
         android:layout_width="0dp"
-        android:layout_height="180dp"
-        app:layout_constraintBottom_toTopOf="@id/horizontal_scroll"
-        app:layout_constraintEnd_toEndOf="@id/btn_add"
-        app:layout_constraintStart_toStartOf="@id/txt_field_search"
-        app:layout_constraintTop_toBottomOf="@id/txt_field_search" />
-
-    <include
-        layout="@layout/item_card_info"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toTopOf="@id/horizontal_scroll"
         app:layout_constraintEnd_toEndOf="@id/btn_add"
         app:layout_constraintStart_toStartOf="@id/txt_field_search"

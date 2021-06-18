@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.example.expenses.expenses.tracking.`object`.Card
+import com.example.expenses.expenses.tracking.fragment.CardAdapterFragment
 
 class CardPagerAdapter(
     fragmentManager: FragmentManager,
