@@ -99,6 +99,16 @@
             app:layout_constraintStart_toEndOf="@id/title_income_balance"
             app:layout_constraintTop_toBottomOf="@id/card_income_barrier" />
 
+        <ImageView
+            android:id="@+id/ic_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_income_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/income_info"
+            app:layout_constraintStart_toStartOf="@id/title_income_balance"
+            app:layout_constraintTop_toTopOf="@id/income_info" />
+
         <TextView
             android:id="@+id/income_info"
             android:layout_width="0dp"
@@ -107,13 +117,24 @@
             android:fontFamily="serif"
             android:text="@string/received_balance_placeholder"
             android:textColor="#9eaab0"
-            app:layout_constraintEnd_toStartOf="@id/outcome_info"
-            app:layout_constraintStart_toStartOf="@id/title_income_balance"
+            app:layout_constraintEnd_toStartOf="@id/ic_outcome"
+            app:layout_constraintStart_toEndOf="@id/ic_income"
             app:layout_constraintTop_toBottomOf="@id/title_income_balance" />
+
+        <ImageView
+            android:id="@+id/ic_outcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_outcome_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/income_info"
+            app:layout_constraintStart_toEndOf="@id/income_info"
+            app:layout_constraintEnd_toStartOf="@id/outcome_info"
+            app:layout_constraintTop_toTopOf="@id/income_info" />
 
         <TextView
             android:id="@+id/outcome_info"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="serif"
@@ -121,7 +142,7 @@
             android:text="@string/outgoing_balance_placeholder"
             android:textColor="#9eaab0"
             app:layout_constraintEnd_toEndOf="@id/title_outcome_balance"
-            app:layout_constraintStart_toEndOf="@id/income_info"
+            app:layout_constraintStart_toEndOf="@id/ic_outcome"
             app:layout_constraintTop_toBottomOf="@id/title_outcome_balance" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

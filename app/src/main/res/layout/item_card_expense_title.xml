@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="#263238">
+
+    <View
+        android:id="@+id/top_separator"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#9eaab0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/expense_period"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="monospace"
+        android:text="16 de Abril"
+        android:textColor="#9eaab0"
+        app:layout_constraintBottom_toTopOf="@id/bottom_separator"
+        app:layout_constraintEnd_toStartOf="@id/collapse_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_separator" />
+
+    <ImageView
+        android:id="@+id/collapse_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Clique aqui para ocultar as entradas e saidas do dia"
+        android:focusable="true"
+        android:importantForAccessibility="yes"
+        android:padding="8dp"
+        android:src="@drawable/ic_collapse_button"
+        app:layout_constraintBottom_toTopOf="@id/bottom_separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/expense_period"
+        app:layout_constraintTop_toBottomOf="@id/top_separator" />
+
+    <View
+        android:id="@+id/bottom_separator"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#9eaab0"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

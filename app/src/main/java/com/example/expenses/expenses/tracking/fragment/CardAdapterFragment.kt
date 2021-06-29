@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.expenses.expenses.tracking.`object`.Card
+import com.example.expenses.expenses.tracking.model.Card
 import com.example.expenses.expenses.tracking.databinding.ItemCardInfoBinding
 
 class CardAdapterFragment(private val cardItemInfo: Card) : Fragment() {

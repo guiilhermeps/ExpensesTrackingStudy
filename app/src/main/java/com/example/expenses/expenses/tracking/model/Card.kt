@@ -1,4 +1,4 @@
-package com.example.expenses.expenses.tracking.`object`
+package com.example.expenses.expenses.tracking.model
 
 data class Card(
     val cardNumber: String,
