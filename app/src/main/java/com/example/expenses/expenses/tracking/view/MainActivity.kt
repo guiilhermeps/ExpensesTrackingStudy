@@ -1,5 +1,6 @@
 package com.example.expenses.expenses.tracking.view
 
+import android.content.Context
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+
+        with(getSharedPreferences("themeInfo", Context.MODE_PRIVATE)) {
+            setTheme(getInt("InfoThemeInCache", R.style.ExpensesTrackingLight))
+        }
         setContentView(binding.root)
 
         setFragment(HomeFragment(), HOME_TAG)
