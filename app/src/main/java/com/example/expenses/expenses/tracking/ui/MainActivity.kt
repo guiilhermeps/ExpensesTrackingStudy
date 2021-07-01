@@ -8,11 +8,9 @@ import androidx.fragment.app.Fragment
 import com.example.expenses.expenses.tracking.ui.fragment.HomeFragment
 import com.example.expenses.expenses.tracking.R
 import com.example.expenses.expenses.tracking.databinding.ActivityMainBinding
-import com.example.expenses.expenses.tracking.ui.fragment.ReportFragment
 import com.google.android.material.navigation.NavigationView
 
 private const val HOME_TAG = "Home"
-private const val REPORT_TAG = "Report"
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -38,11 +36,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.home_fragment -> {
                 supportFragmentManager.beginTransaction()
                 setFragment(HomeFragment(), HOME_TAG)
-                true
-            }
-            R.id.report_fragment -> {
-                supportFragmentManager.beginTransaction()
-                setFragment(ReportFragment(), REPORT_TAG)
                 true
             }
             else -> {
