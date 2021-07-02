@@ -49,10 +49,10 @@
 
 
     <androidx.viewpager.widget.ViewPager
-        android:layout_marginTop="16dp"
         android:id="@+id/pager_card"
         android:layout_width="0dp"
         android:layout_height="200dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toTopOf="@id/horizontal_scroll"
         app:layout_constraintEnd_toEndOf="@id/btn_add"
         app:layout_constraintStart_toStartOf="@id/txt_field_search"
@@ -234,8 +234,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/horizontal_scroll">
 
-        <include layout="@layout/group" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/extract_history"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/horizontal_scroll"
+        app:layout_constraintStart_toEndOf="@id/horizontal_scroll"
+        app:layout_constraintStart_toStartOf="@id/horizontal_scroll"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_scroll"
+        tools:listitem="@layout/item_expense_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
