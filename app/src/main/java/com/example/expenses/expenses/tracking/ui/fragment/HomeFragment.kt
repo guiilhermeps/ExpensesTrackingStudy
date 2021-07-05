@@ -5,10 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.expenses.expenses.tracking.R
 import com.example.expenses.expenses.tracking.`object`.Card
+import com.example.expenses.expenses.tracking.`object`.Expense
 import com.example.expenses.expenses.tracking.adapter.CardPagerAdapter
+import com.example.expenses.expenses.tracking.adapter.ExtractExpenseAdapter
 import com.example.expenses.expenses.tracking.databinding.FragmentHomeBinding
+import java.util.*
 
 class HomeFragment : Fragment() {
 
@@ -58,6 +62,32 @@ class HomeFragment : Fragment() {
                     )
                 )
             }
+        }
+
+
+        binding.extractHistory.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            adapter = ExtractExpenseAdapter(
+                arrayListOf(
+                    Expense(
+                        1,
+                        Date(),
+                        "Mensalidade Faculdade",
+                        "Educação",
+                        false,
+                        187.89
+                    ),
+
+                    Expense(
+                        1,
+                        Date(),
+                        "Mensalidade Condominio",
+                        "Moradia",
+                        false,
+                        320.47
+                    )
+                )
+            )
         }
 
     }
