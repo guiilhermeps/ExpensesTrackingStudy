@@ -9,10 +9,13 @@ import com.example.expenses.expenses.tracking.R
 import com.example.expenses.expenses.tracking.databinding.ActivityMainBinding
 import com.example.expenses.expenses.tracking.fragment.HomeFragment
 import com.example.expenses.expenses.tracking.fragment.ReportFragment
+import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO
+import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO_CACHE
 import com.google.android.material.navigation.NavigationView
 
 private const val HOME_TAG = "Home"
 private const val REPORT_TAG = "Report"
+
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
@@ -20,10 +23,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-
-        with(getSharedPreferences("themeInfo", Context.MODE_PRIVATE)) {
-            setTheme(getInt("InfoThemeInCache", R.style.ExpensesTrackingLight))
-        }
+        setTheme()
         setContentView(binding.root)
 
         setFragment(HomeFragment(), HOME_TAG)
@@ -58,5 +58,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 fragment,
                 tag
             ).commit()
+    }
+
+    private fun setTheme() {
+        with(getSharedPreferences(THEME_INFO, Context.MODE_PRIVATE)) {
+            setTheme(getInt(THEME_INFO_CACHE, R.style.ExpensesTrackingLight))
+        }
     }
 }

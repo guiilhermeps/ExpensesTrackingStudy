@@ -1,21 +1,21 @@
 package com.example.expenses.expenses.tracking.fragment
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.expenses.expenses.tracking.R
-import com.example.expenses.expenses.tracking.model.Card
 import com.example.expenses.expenses.tracking.adapter.CardPagerAdapter
 import com.example.expenses.expenses.tracking.adapter.ExtractExpenseAdapter
 import com.example.expenses.expenses.tracking.databinding.FragmentHomeBinding
+import com.example.expenses.expenses.tracking.model.Card
 import com.example.expenses.expenses.tracking.model.Expense
+import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO
+import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO_CACHE
 import java.util.*
 
 class HomeFragment : Fragment() {
@@ -94,10 +94,12 @@ class HomeFragment : Fragment() {
     private fun initButtons() {
         binding.buttonAddExpense.setOnClickListener {
             activity?.run {
-                val sharedPreferences = baseContext.getSharedPreferences("themeInfo", Context.MODE_PRIVATE)
-                sharedPreferences.edit {
-                    putInt("InfoThemeInCache", R.style.ExpensesTrackingDark)
+                baseContext.getSharedPreferences(THEME_INFO, Context.MODE_PRIVATE).apply {
+                    edit {
+                        putInt(THEME_INFO_CACHE, R.style.ExpensesTrackingDark)
+                    }
                 }
+                recreate()
             }
         }
     }

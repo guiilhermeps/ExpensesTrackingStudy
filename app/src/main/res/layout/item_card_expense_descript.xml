@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:paddingTop="8dp"
     android:paddingBottom="8dp"
-    tools:background="#263238">
+    tools:background="?attr/main_background">
 
     <ImageView
         android:id="@+id/expense_type_icon"
@@ -25,7 +25,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Despesas com Condominio"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/expense_description_title"
         app:layout_constraintEnd_toStartOf="@id/expense_value"
         app:layout_constraintStart_toEndOf="@id/expense_type_icon"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +35,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Moradia"
-        android:textColor="#9eaab0"
+        android:textColor="?attr/expense_description_category"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/expense_value"
         app:layout_constraintStart_toEndOf="@id/expense_type_icon"

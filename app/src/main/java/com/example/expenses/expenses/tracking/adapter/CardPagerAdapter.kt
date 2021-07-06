@@ -3,8 +3,8 @@ package com.example.expenses.expenses.tracking.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.example.expenses.expenses.tracking.model.Card
 import com.example.expenses.expenses.tracking.fragment.CardAdapterFragment
+import com.example.expenses.expenses.tracking.model.Card
 
 class CardPagerAdapter(
     fragmentManager: FragmentManager,
@@ -14,6 +14,6 @@ class CardPagerAdapter(
     override fun getCount() = cardsList.size
 
     override fun getItem(position: Int): Fragment {
-        return CardAdapterFragment(cardsList[position])
+        return CardAdapterFragment.newInstance(cardsList[position])
     }
 }

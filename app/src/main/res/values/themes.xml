@@ -1,23 +1,33 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="ExpensesTrackingLight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="ExpensesTrackingBaseTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorAccent">@color/purple_200</item>
-
-        <item name="main_background">#ffffff</item>
     </style>
 
-    <style name="ExpensesTrackingDark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorAccent">@color/purple_200</item>
-
-        <item name="main_background">#263238</item>
-
+    <style name="ExpensesTrackingLight" parent="ExpensesTrackingBaseTheme">
+        <item name="main_background">@color/light_background</item>
+        <item name="button_add_color">@android:color/black</item>
+        <item name="expense_description_title">@color/light_expense_description_title</item>
+        <item name="expense_description_category">@color/light_expense_description_category</item>
+        <item name="bottomNavigationStyle">@style/LightBottomNavigationMainView</item>
     </style>
 
-    <style name="BottomNavigationMainView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+    <style name="ExpensesTrackingDark" parent="ExpensesTrackingBaseTheme">
+        <item name="main_background">@color/dark_background</item>
+        <item name="button_add_color">@color/green</item>
+        <item name="expense_description_title">@color/dark_expense_description_title</item>
+        <item name="expense_description_category">@color/dark_expense_description_category</item>
+        <item name="bottomNavigationStyle">@style/DarkBottomNavigationMainView</item>
+    </style>
+
+    <style name="LightBottomNavigationMainView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="backgroundTint">#2196F3</item>
+        <item name="itemIconTint">@android:color/black</item>
+    </style>
+
+    <style name="DarkBottomNavigationMainView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="backgroundTint">#263238</item>
     </style>
 </resources>
