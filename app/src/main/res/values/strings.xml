@@ -26,8 +26,8 @@
     <string name="value_2">+ $4,500</string>
     <string name="item_value_2">- $1000</string>
     <string name="other_date">16 Abril</string>
-    <string name="relative">Relative</string>
-    <string name="linear">Linear</string>
+    <string name="report">Report</string>
+    <string name="home">Home</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

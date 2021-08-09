@@ -4,34 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#263238">
+    android:background="?attr/main_background">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/search_bar_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/search"
+        android:textColorHint="@android:color/white"
         app:layout_constraintEnd_toStartOf="@+id/btn_search"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:startIconDrawable="@drawable/ic_search"
+        app:startIconTint="@android:color/white"
 
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#2d383e"
-            android:hint="@string/search"
-            android:textColor="#4f585d" />
+           android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_search"
         android:layout_width="70dp"
-        android:layout_height="75dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:backgroundTint="#476aeb"
+        android:backgroundTint="?attr/button_add_color"
         android:text="@string/soma"
         app:layout_constraintBottom_toBottomOf="@id/search_bar_layout"
         app:layout_constraintCircleRadius="32dp"
@@ -43,13 +47,13 @@
         android:id="@+id/lista_cartoes"
         android:layout_width="0dp"
         android:layout_height="140dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_bar_layout" />
 
     <include
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         layout="@layout/card_info"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -60,15 +64,16 @@
         app:layout_constraintTop_toBottomOf="@+id/search_bar_layout"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/extrato"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/extrato"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lista_cartoes"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/lista_cartoes"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

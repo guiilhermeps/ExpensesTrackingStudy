@@ -5,16 +5,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.expenses.expenses.tracking.`object`.Card
+import com.example.expenses.expenses.tracking.model.Card
 import com.example.expenses.expenses.tracking.databinding.CardInfoBinding
 
-class CardAdapterFragment(private val cardInfo: Card): Fragment() {
+class CardAdapterFragment() : Fragment() {
     private lateinit var binding: CardInfoBinding
 
+    companion object {
+        const val CARD_ITEM_POSITION = "cardPositionItem"
+
+        fun newInstance(cardInfo: Card): Fragment {
+            return CardAdapterFragment().apply {
+                val bundle = Bundle()
+                bundle.putParcelable(CARD_ITEM_POSITION, cardInfo)
+                arguments = bundle
+            }
+        }
+    }
+
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View {
         binding = CardInfoBinding.inflate(inflater, container, false)
         return binding.root
@@ -22,9 +34,13 @@ class CardAdapterFragment(private val cardInfo: Card): Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.cardNumber.text = cardInfo.cardNumber
-        binding.balanceValue.text = cardInfo.resume
-        binding.entryValue.text = cardInfo.incomeResume
-        binding.expenseValue.text = cardInfo.outcomeResume
+
+        savedInstanceState?.getParcelable<Card>(CARD_ITEM_POSITION)?.apply {
+
+            binding.cardNumber.text = cardNumber
+            binding.balanceValue.text = resume
+            binding.entryValue.text = incomeResume
+            binding.expenseValue.text = outcomeResume
+        }
     }
 }

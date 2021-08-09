@@ -1,5 +1,6 @@
 package com.example.expenses.expenses.tracking.view
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -8,6 +9,8 @@ import com.example.expenses.expenses.tracking.R
 import com.example.expenses.expenses.tracking.databinding.ActivityMainBinding
 import com.example.expenses.expenses.tracking.fragment.HomeFragment
 import com.example.expenses.expenses.tracking.fragment.ReportFragment
+import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO
+import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO_CACHE
 import com.google.android.material.navigation.NavigationView
 
 private const val HOME_TAG = "Home"
@@ -20,6 +23,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setTheme()
         setContentView(binding.root)
 
         setFragment(HomeFragment(), HOME_TAG)
@@ -36,11 +40,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
 
-            R.id.relative -> {
+            R.id.home_fragment -> {
                 setFragment(HomeFragment(), HOME_TAG)
                 true
             }
-            R.id.linear -> {
+            R.id.report_fragment -> {
                 setFragment(ReportFragment(), REPORT_TAG)
                 true
             }
@@ -59,4 +63,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             ).commit()
     }
 
+    private fun setTheme(){
+        with(getSharedPreferences(THEME_INFO, Context.MODE_PRIVATE)){
+            setTheme(getInt(THEME_INFO_CACHE,R.style.ExpensesTrackingLight))
+        }
+    }
 }
