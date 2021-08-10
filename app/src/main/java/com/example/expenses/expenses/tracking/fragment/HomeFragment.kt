@@ -21,6 +21,8 @@ import java.util.*
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
+    private val expenseList = mutableListOf<Card>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -42,26 +44,7 @@ class HomeFragment : Fragment() {
             adapter = fragmentManager?.let {
                 CardPagerAdapter(
                     it,
-                    arrayListOf(
-                        Card(
-                            "**** 9389",
-                            "R$ 250,00",
-                            "R$ 100,00",
-                            "R$ 50,00"
-                        ),
-                        Card(
-                            "**** 7348",
-                            "R$ 1000,00",
-                            "R$ 500,00",
-                            "R$ 50,00"
-                        ),
-                        Card(
-                            "**** 3483",
-                            "R$ 2000,00",
-                            "R$ 500,00",
-                            "R$ 50,00"
-                        )
-                    )
+                    expenseList
                 )
             }
         }

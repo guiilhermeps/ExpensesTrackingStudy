@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.expenses.expenses.tracking.model.Card
 import com.example.expenses.expenses.tracking.databinding.ItemCardInfoBinding
+import com.example.expenses.expenses.tracking.model.Card
 
 class CardAdapterFragment : Fragment() {
     private lateinit var binding: ItemCardInfoBinding
