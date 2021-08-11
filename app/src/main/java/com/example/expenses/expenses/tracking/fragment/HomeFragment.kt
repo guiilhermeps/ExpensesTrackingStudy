@@ -1,5 +1,6 @@
 package com.example.expenses.expenses.tracking.fragment
 
+import CardPagerAdapter
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +11,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.expenses.expenses.tracking.R
 import com.example.expenses.expenses.tracking.model.Card
-import com.example.expenses.expenses.tracking.adapter.CardAdapter
 import com.example.expenses.expenses.tracking.adapter.ExtractExpenseAdapter
 import com.example.expenses.expenses.tracking.databinding.FragmentHomeBinding
 import com.example.expenses.expenses.tracking.model.Expense
@@ -43,9 +43,9 @@ class HomeFragment : Fragment() {
             setPadding(35, 0, 35, 0)
             pageMargin = 15
             adapter = fragmentManager?.let {
-                CardAdapter(
+                CardPagerAdapter(
                         it,
-                       expenseList as ArrayList<Card>
+                       expenseList
                 )
             }
         }
