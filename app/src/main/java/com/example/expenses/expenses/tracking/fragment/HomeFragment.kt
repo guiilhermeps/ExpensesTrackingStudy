@@ -17,9 +17,11 @@ import com.example.expenses.expenses.tracking.model.Expense
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO_CACHE
 import java.util.*
+import kotlin.collections.ArrayList
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
+    private val expenseList = mutableListOf<Card>()
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -43,26 +45,7 @@ class HomeFragment : Fragment() {
             adapter = fragmentManager?.let {
                 CardAdapter(
                         it,
-                        arrayListOf(
-                                Card(
-                                        "**** 9389",
-                                        "R$ 250,00",
-                                        "R$ 100,00",
-                                        "R$ 50,00"
-                                ),
-                                Card(
-                                        "**** 7348",
-                                        "R$ 1000,00",
-                                        "R$ 500,00",
-                                        "R$ 50,00"
-                                ),
-                                Card(
-                                        "**** 3483",
-                                        "R$ 2000,00",
-                                        "R$ 500,00",
-                                        "R$ 50,00"
-                                )
-                        )
+                       expenseList as ArrayList<Card>
                 )
             }
         }
