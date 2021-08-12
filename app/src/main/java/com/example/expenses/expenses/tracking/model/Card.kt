@@ -2,21 +2,21 @@ package com.example.expenses.expenses.tracking.model
 
 import android.os.Parcel
 import android.os.Parcelable
+import com.example.expenses.expenses.tracking.CardInterface
 
-data class Card(
-    val cardNumber: String?,
-    val resume: String?,
-    val incomeResume: String?,
-    val outcomeResume: String?
-) : Parcelable {
+class Card(
+    cardNumber: String?,
+    resume: String?,
+    incomeResume: String?,
+    outcomeResume: String?
+) : CardInterface(cardNumber, resume, incomeResume, outcomeResume) {
 
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(cardNumber)
