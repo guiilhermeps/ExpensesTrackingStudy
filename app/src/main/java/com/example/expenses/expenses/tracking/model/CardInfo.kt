@@ -2,14 +2,14 @@ package com.example.expenses.expenses.tracking.model
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.example.expenses.expenses.tracking.CardInterface
+import com.example.expenses.expenses.tracking.Card
 
-class Card(
+class CardInfo(
     cardNumber: String?,
     resume: String?,
     incomeResume: String?,
     outcomeResume: String?
-) : CardInterface(cardNumber, resume, incomeResume, outcomeResume) {
+) : Card(cardNumber, resume, incomeResume, outcomeResume) {
 
     constructor(parcel: Parcel) : this(
         parcel.readString(),
@@ -29,12 +29,12 @@ class Card(
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<Card> {
-        override fun createFromParcel(parcel: Parcel): Card {
-            return Card(parcel)
+    companion object CREATOR : Parcelable.Creator<CardInfo> {
+        override fun createFromParcel(parcel: Parcel): CardInfo {
+            return CardInfo(parcel)
         }
 
-        override fun newArray(size: Int): Array<Card?> {
+        override fun newArray(size: Int): Array<CardInfo?> {
             return arrayOfNulls(size)
         }
     }

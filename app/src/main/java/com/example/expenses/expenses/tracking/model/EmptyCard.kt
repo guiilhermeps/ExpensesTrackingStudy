@@ -2,9 +2,9 @@ package com.example.expenses.expenses.tracking.model
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.example.expenses.expenses.tracking.CardInterface
+import com.example.expenses.expenses.tracking.Card
 
-class EmptyCard : CardInterface(null, null, null, null) {
+class EmptyCard : Card(null, null, null, null) {
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(cardNumber)

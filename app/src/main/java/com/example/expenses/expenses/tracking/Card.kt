@@ -2,7 +2,7 @@ package com.example.expenses.expenses.tracking
 
 import android.os.Parcelable
 
-abstract class CardInterface(
+abstract class Card(
     val cardNumber: String?,
     val resume: String?,
     val incomeResume: String?,
