@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.expenses.expenses.tracking.model.Card
+import com.example.expenses.expenses.tracking.Card
 import com.example.expenses.expenses.tracking.databinding.CardInfoBinding
 
 class CardAdapterFragment() : Fragment() {
@@ -14,10 +14,11 @@ class CardAdapterFragment() : Fragment() {
     companion object {
         const val CARD_ITEM_POSITION = "cardPositionItem"
 
-        fun newInstance(cardInfo: Card): Fragment {
+        fun newInstance(card: Card): Fragment {
+
             return CardAdapterFragment().apply {
                 val bundle = Bundle()
-                bundle.putParcelable(CARD_ITEM_POSITION, cardInfo)
+                bundle.putParcelable(CARD_ITEM_POSITION, card)
                 arguments = bundle
             }
         }
