@@ -9,18 +9,20 @@ import android.view.ViewGroup
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.expenses.expenses.tracking.Card
 import com.example.expenses.expenses.tracking.R
-import com.example.expenses.expenses.tracking.model.Card
+import com.example.expenses.expenses.tracking.model.CardInfo
 import com.example.expenses.expenses.tracking.adapter.ExtractExpenseAdapter
 import com.example.expenses.expenses.tracking.databinding.FragmentHomeBinding
+import com.example.expenses.expenses.tracking.model.EmptyCard
 import com.example.expenses.expenses.tracking.model.Expense
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO_CACHE
 import java.util.*
-import kotlin.collections.ArrayList
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
+
     private val expenseList = mutableListOf<Card>()
 
     override fun onCreateView(
@@ -36,6 +38,18 @@ class HomeFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         initButtons()
+
+        expenseList.add(
+            CardInfo(
+                "123",
+                "TESTE",
+                "1234",
+                "321"
+            )
+        )
+
+
+        expenseList.add(EmptyCard())
 
 
         binding.listaCartoes.apply {
