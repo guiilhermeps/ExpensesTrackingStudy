@@ -13,7 +13,7 @@ class CardPagerAdapter(
     override fun getCount() = cardsList.size
 
     override fun getItem(position: Int): Fragment {
-        return CardAdapterFragment(cardsList[position])
+        return CardAdapterFragment.newInstance(cardsList[position])
     }
 }
 

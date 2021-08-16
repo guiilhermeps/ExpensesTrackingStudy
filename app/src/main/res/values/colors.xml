@@ -11,4 +11,14 @@
     <color name="colorBackgroud">#263238</color>
     <color name="colorCard">#415159</color>
 
+    <color name="red">#F44336</color>
+    <color name="green">#8BC34A</color>
+
+    <color name="light_background">#ECECEC</color>
+    <color name="dark_background">#263238</color>
+    <color name="light_expense_description_title">@android:color/black</color>
+    <color name="light_expense_description_category">#9eaab0</color>
+    <color name="dark_expense_description_title">@android:color/white</color>
+    <color name="dark_expense_description_category">#9eaab0</color>
+
 </resources>

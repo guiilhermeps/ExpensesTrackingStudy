@@ -9,8 +9,21 @@ import com.example.expenses.expenses.tracking.`object`.Card
 import com.example.expenses.expenses.tracking.databinding.FragmentHomeBinding
 import com.example.expenses.expenses.tracking.databinding.ItemCardInfoBinding
 
-class CardAdapterFragment(private val cardItemInfo: Card) : Fragment() {
+class CardAdapterFragment : Fragment() {
     private lateinit var binding: ItemCardInfoBinding
+
+
+    companion object {
+        const val CARD_ITEM_POSITION = "cardPositionItem"
+
+        fun newInstance(cardItemInfo: Card): Fragment {
+            return CardAdapterFragment().apply {
+                val bundle = Bundle()
+                bundle.putParcelable(CARD_ITEM_POSITION, cardItemInfo)
+                arguments = bundle
+            }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,9 +41,11 @@ class CardAdapterFragment(private val cardItemInfo: Card) : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.txtCardNumber.text = cardItemInfo.cardNumber
-        binding.txtBalanceNumber.text = cardItemInfo.resume
-        binding.txtIncomeNumber.text = cardItemInfo.incomeResume
-        binding.txtExpensesNumber.text = cardItemInfo.outComeResume
+        savedInstanceState?.getParcelable<Card>(CARD_ITEM_POSITION)?.apply {
+            binding.txtCardNumber.text = cardNumber
+            binding.txtBalanceNumber.text = resume
+            binding.txtIncomeNumber.text = incomeResume
+            binding.txtExpensesNumber.text = outComeResume
+        }
     }
 }

@@ -45,7 +45,7 @@ class ExtractExpenseHolder(
             expenseTitle.text = expenseName
             expenseCategory.text = expenseTypeCategory
             expenseIcon.setIconForExpense(isIncomeValue)
-//            expenseVal.setExpenseTextColor(isIncomeValue, expenseValue)
+            expenseVal.setExpenseTextColor(isIncomeValue, expenseValue)
         }
     }
 
@@ -61,17 +61,17 @@ class ExtractExpenseHolder(
         }
     }
 
-//    private fun TextView.setExpenseTextColor(isComingValue: Boolean, expenseValue: Double) {
-//        if (isComingValue) {
-//            apply {
-//                text = "+R$ $expenseValue ".replace(".", ",")
-//                setTextColor(resources.getColor(R.color.green))
-//            }
-//        } else {
-//            apply {
-//                text = "-R$ $expenseValue".replace(".", ",")
-//                setTextColor(resources.getColor(R.color.red))
-//            }
-//        }
-//    }
+    private fun TextView.setExpenseTextColor(isComingValue: Boolean, expenseValue: Double) {
+        if (isComingValue) {
+            apply {
+                text = "+R$ $expenseValue ".replace(".", ",")
+                setTextColor(resources.getColor(R.color.green))
+            }
+        } else {
+            apply {
+                text = "-R$ $expenseValue".replace(".", ",")
+                setTextColor(resources.getColor(R.color.red))
+            }
+        }
+    }
 }
