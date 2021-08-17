@@ -2,17 +2,17 @@ package com.example.expenses.expenses.tracking.ui.fragment
 
 import android.content.Context
 import android.os.Bundle
-import android.provider.Settings.Global.putInt
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.expenses.expenses.tracking.CardInfo
+import com.example.expenses.expenses.tracking.EmptyCard
 import com.example.expenses.expenses.tracking.R
 import com.example.expenses.expenses.tracking.`object`.Card
 import com.example.expenses.expenses.tracking.`object`.Expense
-import com.example.expenses.expenses.tracking.adapter.CardPagerAdapter
 import com.example.expenses.expenses.tracking.adapter.ExtractExpenseAdapter
 import com.example.expenses.expenses.tracking.databinding.FragmentHomeBinding
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO
