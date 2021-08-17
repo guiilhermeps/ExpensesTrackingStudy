@@ -22,17 +22,14 @@ import java.util.*
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
+    private val expenseList = mutableListOf<Card>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(
-            inflater,
-            container,
-            false
-        )
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -41,36 +38,15 @@ class HomeFragment : Fragment() {
 
         initButtons()
 
-        binding.pagerCard.apply {
-            clipToPadding = false
-            setPadding(35, 0, 35, 0)
-            pageMargin = 15
-            adapter = fragmentManager?.let { fragmentManager ->
-                CardPagerAdapter(
-                    fragmentManager,
-                    arrayListOf(
-                        Card(
-                            "**** 0420",
-                            "R$ 823,00",
-                            "R$ 75,00",
-                            "50,00"
-                        ),
-                        Card(
-                            "**** 8750",
-                            "R$ 1200,00",
-                            "R$ 42,00",
-                            "34,40"
-                        ), Card(
-                            "**** 9087",
-                            "R$ 823,00",
-                            "R$ 87,28",
-                            "41,90"
-                        )
-                    )
-                )
-            }
-        }
-
+        expenseList.add(
+            CardInfo(
+                "123",
+                "Teste",
+                "123",
+                "123"
+            )
+        )
+        expenseList.add(EmptyCard())
 
         binding.extractHistory.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
@@ -79,31 +55,29 @@ class HomeFragment : Fragment() {
                     Expense(
                         1,
                         Date(),
-                        "Mensalidade Faculdade",
-                        "Educação",
-                        false,
-                        187.89
-                    ),
-
-                    Expense(
-                        1,
-                        Date(),
                         "Mensalidade Condominio",
                         "Moradia",
                         false,
-                        320.47
+                        545.75
+                    ),
+                    Expense(
+                        1,
+                        Date(),
+                        "Mensalidade Faculdade",
+                        "Educação",
+                        false,
+                        320.45
                     )
                 )
             )
         }
-
     }
 
-    private fun initButtons(){
-        binding.btnAdd.setOnClickListener{
+    private fun initButtons() {
+        binding.btnAdd.setOnClickListener {
             activity?.run {
                 baseContext.getSharedPreferences(THEME_INFO, Context.MODE_PRIVATE).apply {
-                    edit{
+                    edit {
                         putInt(THEME_INFO_CACHE, R.style.ExpensesTrackingDark)
                     }
                 }
@@ -111,5 +85,4 @@ class HomeFragment : Fragment() {
             }
         }
     }
-
 }

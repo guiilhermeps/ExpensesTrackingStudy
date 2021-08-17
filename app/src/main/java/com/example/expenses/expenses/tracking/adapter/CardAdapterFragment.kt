@@ -6,12 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.expenses.expenses.tracking.`object`.Card
-import com.example.expenses.expenses.tracking.databinding.FragmentHomeBinding
 import com.example.expenses.expenses.tracking.databinding.ItemCardInfoBinding
 
 class CardAdapterFragment : Fragment() {
     private lateinit var binding: ItemCardInfoBinding
-
 
     companion object {
         const val CARD_ITEM_POSITION = "cardPositionItem"
@@ -30,18 +28,14 @@ class CardAdapterFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = ItemCardInfoBinding.inflate(
-            inflater,
-            container,
-            false
-        )
+        binding = ItemCardInfoBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        savedInstanceState?.getParcelable<Card>(CARD_ITEM_POSITION)?.apply {
+        this.arguments?.getParcelable<Card>(CARD_ITEM_POSITION)?.apply {
             binding.txtCardNumber.text = cardNumber
             binding.txtBalanceNumber.text = resume
             binding.txtIncomeNumber.text = incomeResume
