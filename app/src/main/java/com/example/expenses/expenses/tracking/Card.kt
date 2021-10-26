@@ -12,9 +12,7 @@ abstract class Card(
     fun isValuesNull(): Boolean {
         val listToValidate = listOf(
             cardNumber.isNullOrEmpty(),
-            resume.isNullOrEmpty(),
-            incomeResume.isNullOrEmpty(),
-            outcomeResume.isNullOrBlank()
+            resume.isNullOrEmpty()
         )
 
         listToValidate.forEach {

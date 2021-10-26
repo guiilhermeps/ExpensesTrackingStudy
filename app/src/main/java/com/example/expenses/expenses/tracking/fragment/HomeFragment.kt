@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.expenses.expenses.tracking.Card
 import com.example.expenses.expenses.tracking.R
 import com.example.expenses.expenses.tracking.adapter.CardPagerAdapter
 import com.example.expenses.expenses.tracking.adapter.ExtractExpenseAdapter
@@ -16,14 +15,13 @@ import com.example.expenses.expenses.tracking.databinding.FragmentHomeBinding
 import com.example.expenses.expenses.tracking.model.CardInfo
 import com.example.expenses.expenses.tracking.model.EmptyCard
 import com.example.expenses.expenses.tracking.model.Expense
+import com.example.expenses.expenses.tracking.util.CardHolder
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO_CACHE
 import java.util.*
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
-
-    private val expenseList = mutableListOf<Card>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,7 +37,7 @@ class HomeFragment : Fragment() {
 
         initButtons()
 
-        expenseList.add(
+        CardHolder.cardList.add(
             CardInfo(
                 "123",
                 "Teste",
@@ -48,7 +46,7 @@ class HomeFragment : Fragment() {
             )
         )
 
-        expenseList.add(EmptyCard())
+        CardHolder.cardList.add(EmptyCard())
 
         binding.cardList.apply {
             clipToPadding = false
@@ -57,7 +55,7 @@ class HomeFragment : Fragment() {
             adapter = fragmentManager?.let {
                 CardPagerAdapter(
                     it,
-                    expenseList
+                    CardHolder.cardList
                 )
             }
         }

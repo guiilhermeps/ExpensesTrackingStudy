@@ -7,8 +7,8 @@ import com.example.expenses.expenses.tracking.Card
 class CardInfo(
     cardNumber: String?,
     resume: String?,
-    incomeResume: String?,
-    outcomeResume: String?
+    incomeResume: String? = "",
+    outcomeResume: String? = ""
 ) : Card(cardNumber, resume, incomeResume, outcomeResume) {
 
     constructor(parcel: Parcel) : this(

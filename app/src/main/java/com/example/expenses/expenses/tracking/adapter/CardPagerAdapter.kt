@@ -6,10 +6,11 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import com.example.expenses.expenses.tracking.Card
 import com.example.expenses.expenses.tracking.fragment.AddCardAdapterFragment
 import com.example.expenses.expenses.tracking.fragment.CardAdapterFragment
+import com.example.expenses.expenses.tracking.util.CardHolder
 
 class CardPagerAdapter(
     fragmentManager: FragmentManager,
-    private val cardsList: List<Card>
+    private val cardsList: MutableList<Card>
 ) : FragmentStatePagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
     private var listIsEmpty = false
 
@@ -23,7 +24,9 @@ class CardPagerAdapter(
 
     override fun getItem(position: Int): Fragment {
         return if(listIsEmpty || cardsList[position].isValuesNull()) {
-            AddCardAdapterFragment.newInstance()
+            AddCardAdapterFragment.newInstance {
+                notifyDataSetChanged()
+            }
         } else {
             CardAdapterFragment.newInstance(cardsList[position])
         }

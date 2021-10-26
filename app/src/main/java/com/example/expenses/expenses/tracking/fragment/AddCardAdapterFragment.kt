@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.expenses.expenses.tracking.databinding.ItemCardAddBinding
 
-class AddCardAdapterFragment : Fragment() {
+class AddCardAdapterFragment(
+    private val notifyOnChanged : () -> Unit
+) : Fragment() {
     private lateinit var bindingAddCard: ItemCardAddBinding
 
     companion object {
-        fun newInstance(): Fragment {
-            return AddCardAdapterFragment()
+        fun newInstance(notifyOnChanged: () -> Unit): Fragment {
+            return AddCardAdapterFragment(notifyOnChanged)
         }
     }
 
@@ -33,7 +35,7 @@ class AddCardAdapterFragment : Fragment() {
     private fun setAddCard() {
         bindingAddCard.addCard.setOnClickListener {
             fragmentManager?.let { fragmentManager ->
-                CardAddDialogFragment()
+                CardAddDialogFragment(notifyOnChanged)
                     .show(fragmentManager, null)
             }
         }
