@@ -1,12 +1,11 @@
-package com.example.expenses.expenses.tracking.adapter
+package com.example.expenses.expenses.tracking.adapter.card
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.example.expenses.expenses.tracking.Card
-import com.example.expenses.expenses.tracking.fragment.AddCardAdapterFragment
-import com.example.expenses.expenses.tracking.fragment.CardAdapterFragment
-import com.example.expenses.expenses.tracking.util.CardHolder
+import com.example.expenses.expenses.tracking.model.card.Card
+import com.example.expenses.expenses.tracking.fragment.card.AddCardAdapterFragment
+import com.example.expenses.expenses.tracking.fragment.card.CardAdapterFragment
 
 class CardPagerAdapter(
     fragmentManager: FragmentManager,

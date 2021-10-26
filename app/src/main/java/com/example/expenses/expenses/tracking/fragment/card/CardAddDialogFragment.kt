@@ -1,4 +1,4 @@
-package com.example.expenses.expenses.tracking.fragment
+package com.example.expenses.expenses.tracking.fragment.card
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.example.expenses.expenses.tracking.databinding.DialogAddCardBinding
-import com.example.expenses.expenses.tracking.model.CardInfo
+import com.example.expenses.expenses.tracking.model.card.CardInfo
 import com.example.expenses.expenses.tracking.util.CardHolder
 
 class CardAddDialogFragment(

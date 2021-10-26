@@ -1,4 +1,4 @@
-package com.example.expenses.expenses.tracking
+package com.example.expenses.expenses.tracking.model.card
 
 import android.os.Parcelable
 

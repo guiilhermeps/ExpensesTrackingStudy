@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.expenses.expenses.tracking.R
-import com.example.expenses.expenses.tracking.model.Expense
+import com.example.expenses.expenses.tracking.model.expenses.Expense
 
 class ExtractExpenseAdapter(
     private val extractExpenseList: ArrayList<Expense>

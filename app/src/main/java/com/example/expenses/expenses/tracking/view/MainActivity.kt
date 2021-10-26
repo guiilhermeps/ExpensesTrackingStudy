@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.expenses.expenses.tracking.R
 import com.example.expenses.expenses.tracking.databinding.ActivityMainBinding
-import com.example.expenses.expenses.tracking.fragment.HomeFragment
-import com.example.expenses.expenses.tracking.fragment.ReportFragment
+import com.example.expenses.expenses.tracking.fragment.home.HomeFragment
+import com.example.expenses.expenses.tracking.fragment.report.ReportFragment
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO_CACHE
 import com.google.android.material.navigation.NavigationView

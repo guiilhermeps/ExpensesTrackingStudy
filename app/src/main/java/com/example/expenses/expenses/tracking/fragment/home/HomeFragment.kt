@@ -1,4 +1,4 @@
-package com.example.expenses.expenses.tracking.fragment
+package com.example.expenses.expenses.tracking.fragment.home
 
 import android.content.Context
 import android.os.Bundle
@@ -9,12 +9,12 @@ import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.expenses.expenses.tracking.R
-import com.example.expenses.expenses.tracking.adapter.CardPagerAdapter
+import com.example.expenses.expenses.tracking.adapter.card.CardPagerAdapter
 import com.example.expenses.expenses.tracking.adapter.ExtractExpenseAdapter
 import com.example.expenses.expenses.tracking.databinding.FragmentHomeBinding
-import com.example.expenses.expenses.tracking.model.CardInfo
-import com.example.expenses.expenses.tracking.model.EmptyCard
-import com.example.expenses.expenses.tracking.model.Expense
+import com.example.expenses.expenses.tracking.model.card.CardInfo
+import com.example.expenses.expenses.tracking.model.card.EmptyCard
+import com.example.expenses.expenses.tracking.model.expenses.Expense
 import com.example.expenses.expenses.tracking.util.CardHolder
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO_CACHE

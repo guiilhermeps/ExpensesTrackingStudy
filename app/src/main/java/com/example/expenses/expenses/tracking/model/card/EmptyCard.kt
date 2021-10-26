@@ -1,8 +1,7 @@
-package com.example.expenses.expenses.tracking.model
+package com.example.expenses.expenses.tracking.model.card
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.example.expenses.expenses.tracking.Card
 
 class EmptyCard : Card(null, null, null, null) {
 

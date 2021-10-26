@@ -1,4 +1,4 @@
-package com.example.expenses.expenses.tracking.fragment
+package com.example.expenses.expenses.tracking.fragment.card
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,6 +1,6 @@
 package com.example.expenses.expenses.tracking.util
 
-import com.example.expenses.expenses.tracking.Card
+import com.example.expenses.expenses.tracking.model.card.Card
 
 object CardHolder {
 

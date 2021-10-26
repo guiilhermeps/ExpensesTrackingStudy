@@ -1,11 +1,11 @@
-package com.example.expenses.expenses.tracking.fragment
+package com.example.expenses.expenses.tracking.fragment.card
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.expenses.expenses.tracking.Card
+import com.example.expenses.expenses.tracking.model.card.Card
 import com.example.expenses.expenses.tracking.databinding.ItemCardInfoBinding
 
 class CardAdapterFragment : Fragment() {
