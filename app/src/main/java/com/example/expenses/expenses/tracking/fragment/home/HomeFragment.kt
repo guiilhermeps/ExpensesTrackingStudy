@@ -1,5 +1,6 @@
 package com.example.expenses.expenses.tracking.fragment.home
 
+import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,14 +9,12 @@ import android.view.ViewGroup
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.expenses.expenses.tracking.MyApp
 import com.example.expenses.expenses.tracking.R
-import com.example.expenses.expenses.tracking.adapter.card.CardPagerAdapter
 import com.example.expenses.expenses.tracking.adapter.ExtractExpenseAdapter
+import com.example.expenses.expenses.tracking.adapter.card.CardPagerAdapter
 import com.example.expenses.expenses.tracking.databinding.FragmentHomeBinding
-import com.example.expenses.expenses.tracking.model.card.CardInfo
-import com.example.expenses.expenses.tracking.model.card.EmptyCard
 import com.example.expenses.expenses.tracking.model.expenses.Expense
-import com.example.expenses.expenses.tracking.util.CardHolder
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO
 import com.example.expenses.expenses.tracking.util.StringUtils.THEME_INFO_CACHE
 import java.util.*
@@ -37,17 +36,6 @@ class HomeFragment : Fragment() {
 
         initButtons()
 
-        CardHolder.cardList.add(
-            CardInfo(
-                "123",
-                "Teste",
-                "123",
-                "123"
-            )
-        )
-
-        CardHolder.cardList.add(EmptyCard())
-
         binding.cardList.apply {
             clipToPadding = false
             setPadding(35, 0, 35, 0)
@@ -55,7 +43,7 @@ class HomeFragment : Fragment() {
             adapter = fragmentManager?.let {
                 CardPagerAdapter(
                     it,
-                    CardHolder.cardList
+                    (activity?.application as MyApp).cardHolder
                 )
             }
         }
