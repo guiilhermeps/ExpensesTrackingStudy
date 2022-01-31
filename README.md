@@ -1,6 +1,6 @@
 # ExpensesTrackingStudy
 
-Teste Linha 1
+Teste Linha 1\n
 Teste Linha 2
 Teste Linha 3
 Teste Linha 4
